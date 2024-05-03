@@ -13,3 +13,11 @@ cara menjalankannya adalah membuat 4 terminal berbeda, lalu jalankan "cargo run 
 # 2.2. Modifying the websocket port
 
 Yang perlu dimodifikasi dari client adalah url pada clientbuilder, lalu yang dimodifikasi dari server adalah url dari listenernya, semuanya diubah ke port 8080. Websocket yang digunakan juga pasti sama, karena itu akan memastikan koneksi yang baik antara client dan server.
+
+# 2.3. Small Changes. Add some information to client
+
+<h3>Two Client Terminal</h3>
+
+![alt text](img/tutorial2-Client2.png)
+
+yang perlu dimodifikasi dari server adalah, kita konkatenasi address dari client kepada text yang dikirim, lalu kita kirim lagi ke client, sehingga pada text yang diterima oleh client, langsung tertulis addressnya.

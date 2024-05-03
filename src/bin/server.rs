@@ -26,8 +26,9 @@ async fn handle_connection(
                 match incoming {
                     Some(Ok(msg)) => {
                         if let Some(text) = msg.as_text() {
-                            println!("From client {addr:?} {text:?}");
-                            bcast_tx.send(text.into())?;
+                            println!("From client {addr:?} : {text:?}");
+                            let addr_concat = addr.to_string() + ": " + text;
+                            bcast_tx.send(addr_concat.into())?;
                         }
                     }
                     Some(Err(err)) => return Err(err.into()),
